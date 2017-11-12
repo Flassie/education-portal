@@ -1,0 +1,269 @@
+body,html {
+    height: 100%;
+}
+
+#main-menu {
+    background-color: #006699;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+#main-menu .navbar-brand {
+    color: #ffffff;
+}
+
+#main-menu .nav li a {
+    background-color: #0373a7;
+    color: #ffffff;
+}
+
+#main-menu .nav li:hover a {
+    background-color: #0886c0;
+    color: #ffffff;
+}
+
+#main-menu .nav li.active a {
+    background-color: rgba(29, 142, 207, 0.966);
+}
+
+#main-menu #collapse-menu-btn {
+    background-color: #0099CC;
+    border-color: #ffffff
+}
+
+#main-menu #collapse-menu-btn .icon-bar {
+    background-color: #ffffff
+}
+
+.header {
+    width:100%;
+    height: 535px;
+    background-image:url('../imgs/header-img.jpg');
+    background-size:cover;
+    background-position: center,center;
+
+    position: relative;
+}
+
+.header .auth-block { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    min-height: 13%;
+    background-color: rgba(39, 38, 38, 0.781);
+}
+
+.hidden { display: none; }
+
+/* SIGNIN CONTROLS BEGIN */
+#signin-btn:active,
+#signin-btn:focus,
+#signin-username-input:focus,
+#signin-username-input:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+
+#signin-username-input,
+#signin-btn {
+    background-color: rgba(0, 0, 0, 0.473);
+    color: white;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+#signin-btn:hover,
+#signin-username-input:hover,
+#signin-username-input:focus {
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+#signin-btn {
+    font-weight: bold;
+}
+/* SIGNIN CONTROLS END */
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid {
+    width: 1140px;
+    max-width: 100%;
+    min-width: 290px;
+}
+
+#courses {
+    padding-top: 15px;
+}
+
+.course-box {
+    text-align: center;
+    border-radius: 6px;
+    
+    line-height: 25px;
+    margin-bottom: 7px;
+}
+
+.course-box,
+.course-box *,
+.course-box *:hover,
+.course-box a:focus,
+.course-box a:active  {
+    color: white;
+    font-weight: bold;
+}
+
+.course-box a {
+    display:inline-block;
+    padding: 16px 5% 16px;
+    text-decoration: none;
+
+    width:100%;
+    height:100%;
+}
+
+.animated-box { 
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.light-blue { background: #4dc1b8; }
+.animated-box.light-blue:hover { background: #2368a8; }
+
+.blue { background-color: #0096b2; }
+.animated-box.blue:hover { background-color: #0038b2; }
+
+.dark-blue { background-color: #24505c; }
+.animated-box.dark-blue:hover { background-color: #297183; } 
+
+.green { background-color: #4abc8d; }
+.animated-box.green:hover { background-color: #409270; }
+
+.dark { background-color: rgba(24, 24, 24, 0.966); }
+.animated-box.dark:hover { background-color: rgba(49, 49, 49, 0.966); }
+
+.courses-desc-box {
+    width: 100%;
+    margin-top: 20px;
+    /* height: 35vh; */
+    /* height: 500px; */
+    color: rgb(255, 255, 255);
+}
+
+.courses-desc {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.course-desc {
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.course-desc h1 {
+    text-decoration: underline;
+}
+
+.course-desc-box {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    display: none;
+}
+
+/* GALLERY BLOCK END */
+#gallery-block {
+    width: 100%;
+    background-color: #0277ad;
+    color: white;
+
+    padding-bottom: 55px;
+}
+
+#gallery-block h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#gallery-block a.active {
+    background-color: #0b9fdf;
+}
+
+#gallery-block img {
+    max-width: 100%; 
+    width: 100%; 
+    height: 400px;
+
+    display: none;
+}
+
+.gallery-imgs {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    height: 400px;
+}
+
+.gallery-imgs img {
+    position: absolute;
+}
+
+.stack-top {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+.stack-bottom {
+    position: absolute;
+    z-index: 0;
+    top: 0; 
+}
+
+.gallery-imgs ul.pagination {
+    opacity: 0.3;
+    margin-bottom: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.1s;
+}
+
+.gallery-imgs ul.pagination:hover{
+    opacity: 1.0;
+}
+
+.bottom-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* GALLERY BLOCK END */
+
+/* FOOTER BEGIN */
+
+.footer {
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    padding: 45px 0;
+
+    color: rgb(120, 126, 129);
+}
+
+.footer h4 {
+    color: rgb(204, 209, 211);
+}
+
+/* FOOTER END */
