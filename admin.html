@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/admin_style.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/page.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" id="main-menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="collapse-menu-btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-contents"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">Admin panel</a>
+            </div>
+
+            <div class="navbar-collapse collapse menu-contents" id="main-menu-contents">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#statistics">Statistics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="scroll-target page-block" id="statistics">
+        <div class="container-fluid" style="margin-top: 50px;">
+            <h1 class="text-center">Students in groups</h1>
+            <div class="lesson-statistic" id="math-statistic">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Mathematics: </p>
+                </div>
+                <div class="col-xs-9 col-xs-10 pr-bar"></div>
+            </div>
+
+            <div class="lesson-statistic" id="physics-statistic">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Physics: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+
+            <div class="lesson-statistic" id="lit-statistic">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Literature: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+
+            <div class="lesson-statistic" id="chemistry-statistic">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Chemistry: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10  pr-bar"></div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <h1 class="text-center">Average Score</h1>
+            <div class="average-mark" id="math-average">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Mathematics: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+            <div class="average-mark" id="physics-average">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Physics: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+            <div class="average-mark" id="lit-average">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Literature: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+            <div class="average-mark" id="chemistry-average">
+                <div class="col-xs-3 col-sm-2 text-right">
+                    <p>Chemistry: </p>
+                </div>
+                <div class="col-xs-9 col-sm-10 pr-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-target page-block" id="students-info">
+        <div class="container-fluid">
+            <h1 class="text-center">Our students</h1>
+
+            <div class="dropdown col-xs-2 col-xs-offset-8 col-lg-1 col-lg-offset-10">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">Student number</a>
+                    </li>
+                    <li>
+                        <a href="#">Name</a>
+                    </li>
+                    <li>
+                        <a href="#">Surname</a>
+                    </li>
+                    <li>
+                        <a href="#">Exam #1</a>
+                    </li>
+                    <li>
+                        <a href="#">Exam #2</a>
+                    </li>
+                    <li>
+                        <a href="#">Score</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sort-type">Ascending</label>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sort-type">Descending</label>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <th>Student Number</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Exam #1</th>
+                    <th>Exam #2</th>
+                    <th>Score</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="list-group" style="display: none; position: fixed;" id="edit-context-menu">
+        <a href="#" class="list-group-item">Edit</a>
+        <a href="#" class="list-group-item">Remove</a>
+        <a href="#" class="list-group-item">Add</a>
+    </div>
+
+    <script>
+        var maxStudents = 25;
+        var Student = function (n, fname, sname, e1, e2, less) {
+            this.number = n;
+            this.first_name = fname;
+            this.second_name = sname;
+            this.exam1 = e1;
+            this.exam2 = e2;
+            this.score = (parseInt(e1) + parseInt(e2)) / 2;
+            this.lesson = less;
+        };
+
+        jQuery.fn.extend({
+            progressBar: function (id, progress) {
+                $(this).html("<div class='progress' id='" + id + "'><div class='progress-bar' style='width: " + progress + "%'></div></div>")
+            },
+
+            addStudent: function (student) {
+                $(this).find("tbody").append(
+                    "<tr>" +
+                    "<td>" + student.number + "</td>" +
+                    "<td>" + student.first_name + "</td>" +
+                    "<td>" + student.second_name + "</td>" +
+                    "<td>" + student.exam1 + "</td>" +
+                    "<td>" + student.exam2 + "</td>" +
+                    "<td>" + student.score + "</td>" +
+                    "</tr>"
+                );
+            },
+
+            clearStudents: function () {
+                $(this).find("tbody").html("");
+            },
+
+            addStudents: function (students) {
+                var self = $(this);
+                for (var v of students) {
+                    self.addStudent(v);
+                }
+            }
+        });
+
+        var students = [
+            new Student("20161129063", "Andrei", "Sidorenko", 100, 90, "math"),
+            new Student("20161129001", "Test", "Test2", 80, 90, "lit"),
+            new Student("20161129001", "Test", "Test2", 70, 90, "lit")
+        ];
+
+        var groupsStatistics = new Map();
+        var averageScoreStatistics = new Map();
+        for (var v of students) {
+            if (!groupsStatistics.has(v.lesson)) {
+                groupsStatistics.set(v.lesson, 1);
+            } else {
+                groupsStatistics.set(v.lesson, groupsStatistics.get(v.lesson) + 1);
+            }
+
+            if (!averageScoreStatistics.has(v.lesson)) {
+                averageScoreStatistics.set(v.lesson, v.score);
+            } else {
+                var current = averageScoreStatistics.get(v.lesson);
+                averageScoreStatistics.set(v.lesson, (v.score + current) / groupsStatistics.get(v.lesson));
+            }
+        }
+
+        function initializeProgressBars() {
+            $(".pr-bar").progressBar("", 0);
+
+            for (var [key, val] of groupsStatistics) {
+                var el = $("#" + key + "-statistic .pr-bar .progress-bar");
+                el.addClass(key + "-color");
+                el.width((val / maxStudents) * 100 + "%");
+                el.html(val);
+            }
+
+            for (var [key, val] of averageScoreStatistics) {
+                var el = $("#" + key + "-average .pr-bar .progress-bar")
+                el.addClass(key + "-color");
+                el.width(val + "%");
+                el.html(val)
+            }
+        }
+
+        $(function () {
+            initializeProgressBars();
+
+            $("#students-info").addStudents(students);
+
+            $("#students-info td").contextmenu(function (e) {
+                e.preventDefault();
+                var cmenu = $("#edit-context-menu");
+                cmenu.css({ top: e.pageY, left: e.pageX + 15 });
+                cmenu.show();
+            });
+
+            $("body").click(function () {
+                $("#edit-context-menu").hide();
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+}
+
+.page-block {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+.page-block:nth-child(even) {
+    background-color: white;
+    color: #00577c;
+}
+
+.page-block:nth-child(odd) {
+    background-color: #0277ad;
+    color: white;
+}
+
+.pr-bar .progress-bar {
+    transition-property: width;
+    transition-duration: 750ms;
+    transition-timing-function: ease-out;
+}
+
+#statistics p {
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.144);
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#students-info {
+    flex: 1 0 auto;
+}
+
+.physics-color { background: #4dc1b8; }
+.mathematics-color { background-color: #0096b2; }
+.chemistry-color { background-color: #24505c; } 
+.lit-color { background-color: #4abc8d; }
+
+.page-block:nth-child(odd) .dropdown button {
+    background-color: #0d4a64;
+}
+
+.page-block:nth-child(odd) .dropdown {
+    color: black;
+}
+
+.page-block:nth-child(odd) .dropdown .radio {
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}    
