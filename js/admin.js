@@ -268,9 +268,6 @@ $(function () {
 
     $("#students-info").addStudents(students);
 
-    $(".edit-background#edit-window").click(function() { hideEditWindow() });
-    $(".edit-background#add-window").click(function() { hideAddWindow() });
-
     $("#students-info tbody tr").contextmenu(function (e) {
         e.preventDefault();
         var cmenu = $("#edit-context-menu");
