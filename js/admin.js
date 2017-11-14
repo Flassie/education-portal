@@ -169,7 +169,6 @@ function updateProgressBars() {
 function updateStudents() {
     $("#students-info").clearStudents();
     $("#students-info").addStudents(students);
-
     $("#students-info").updateControlsState();
 }
 
@@ -191,7 +190,7 @@ function showEditWindow(student) {
 function hideEditWindow() {
     var editWindow = $("#edit-window");
 
-    editWindow.find(".edit-block").slideUp(150, function () {
+    editWindow.find(".edit-block").slideUp(300, function () {
         editWindow.hide();
     });
 }
@@ -226,7 +225,7 @@ function showAddWindow() {
 function hideAddWindow() {
     var addWindow = $("#add-window");
 
-    addWindow.find(".edit-block").slideUp(150, function () {
+    addWindow.find(".edit-block").slideUp(300, function () {
         addWindow   .hide();
     });
 }
@@ -268,6 +267,9 @@ $(function () {
     var selectedStudentInfo;
 
     $("#students-info").addStudents(students);
+
+    $(".edit-background#edit-window").click(function() { hideEditWindow() });
+    $(".edit-background#add-window").click(function() { hideAddWindow() });
 
     $("#students-info tbody tr").contextmenu(function (e) {
         e.preventDefault();

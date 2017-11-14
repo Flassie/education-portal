@@ -196,26 +196,30 @@
                 </ul>
             </div>
 
-            <table class="table table-hover" id="students-list">
-                <thead>
-                    <th>
-                        <input type="checkbox">
-                    </th>
-                    <th>Student Number</th>
-                    <th>Name</th>
-                    <th>Surname</th>
-                    <th>Exam #1</th>
-                    <th>Exam #2</th>
-                    <th>Score</th>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div style="overflow-x: scroll;" class="col-xs-12 hidden-scroll">
+                <table class="table table-hover" id="students-list">
+                    <thead>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>Student Number</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Exam #1</th>
+                        <th>Exam #2</th>
+                        <th>Score</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="container-fluid">
-                <button class="btn btn-success" id="add-student" aria-controls="#students-list">Add</button>
-                <button class="btn btn-info" id="edit-student" aria-controls="#students-list" disabled>Edit</button>
-                <button class="btn btn-danger" id="remove-student" aria-controls="#students-list" disabled>Remove</button>
+                <div class="col-xs-12">
+                    <button class="btn btn-success" id="add-student" aria-controls="#students-list">Add</button>
+                    <button class="btn btn-info" id="edit-student" aria-controls="#students-list" disabled>Edit</button>
+                    <button class="btn btn-danger" id="remove-student" aria-controls="#students-list" disabled>Remove</button>
+                </div>
             </div>
         </div>
     </div>
@@ -246,11 +250,11 @@
                     <input class="form-control" id="edit-exam2" placeholder="Exam #2">
                 </div>
 
-                <div class="btn-group" style="width: 100%" id="edit-lesson-chooser">
-                    <button type="button" class="btn btn-primary col-xs-3 math-color" id="edit-math">Mathematics</button>
-                    <button type="button" class="btn btn-primary col-xs-3 physics-color" id="edit-physics">Physics</button>
-                    <button type="button" class="btn btn-primary col-xs-3 lit-color" id="edit-lit">Literature</button>
-                    <button type="button" class="btn btn-primary col-xs-3 chemistry-color" id="edit-chemistry">Chemistry</button>
+                <div style="width: 100%" id="edit-lesson-chooser">
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 math-color" id="edit-math">Mathematics</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 physics-color" id="edit-physics">Physics</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 lit-color" id="edit-lit">Literature</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 chemistry-color" id="edit-chemistry">Chemistry</button>
                 </div>
 
                 <div class="col-xs-5 col-xs-offset-1">
@@ -283,11 +287,11 @@
                     <input class="form-control" id="add-exam2" placeholder="Exam #2">
                 </div>
 
-                <div class="btn-group" style="width: 100%" id="add-lesson-chooser">
-                    <button type="button" class="btn btn-primary col-xs-3 math-color" id="add-math">Mathematics</button>
-                    <button type="button" class="btn btn-primary col-xs-3 physics-color" id="add-physics">Physics</button>
-                    <button type="button" class="btn btn-primary col-xs-3 lit-color" id="add-lit">Literature</button>
-                    <button type="button" class="btn btn-primary col-xs-3 chemistry-color" id="add-chemistry">Chemistry</button>
+                <div style="width: 100%" id="add-lesson-chooser">
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 math-color" id="add-math">Mathematics</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 physics-color" id="add-physics">Physics</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 lit-color" id="add-lit">Literature</button>
+                    <button type="button" class="btn btn-primary col-xs-12 col-md-3 chemistry-color" id="add-chemistry">Chemistry</button>
                 </div>
 
                 <div class="col-xs-5 col-xs-offset-1">
@@ -299,14 +303,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-
-
-        $(function () {
-
-        })
-    </script>
 </body>
 
 </html>

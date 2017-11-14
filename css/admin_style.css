@@ -43,6 +43,16 @@ html, body {
     flex: 1 0 auto;
 }
 
+.hidden-scroll {
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    overflow-x: -moz-scrollbar-none;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+    display: none;
+}
+
 .physics-color { background: #4dc1b8; }
 .math-color { background-color: #0096b2; }
 .chemistry-color { background-color: #24505c; } 
