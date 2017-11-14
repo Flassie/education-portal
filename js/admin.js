@@ -187,7 +187,7 @@ function showEditWindow(student) {
     $("#edit-window #edit-lesson-chooser #edit-" + student.lesson).addClass("selected-lesson");
 
     $("body").addClass("modal-open");
-    $( "#main-menu" ).animate({ "top": "-=50px" }, 200 );
+    $("#main-menu").animate({ "top": "-=50px" }, 200);
 }
 
 function hideEditWindow() {
@@ -197,8 +197,8 @@ function hideEditWindow() {
         editWindow.hide();
         $("body").removeClass("modal-open");
     });
-    
-    $( "#main-menu" ).animate({ "top": "+=50px" }, 200 );
+
+    $("#main-menu").animate({ "top": "+=50px" }, 200);
 }
 
 function collectEditData() {
@@ -228,7 +228,7 @@ function showAddWindow() {
     addWindow.find(".btn-success").prop("disabled", true);
 
     $("body").addClass("modal-open");
-    $( "#main-menu" ).animate({ "top": "-=50px" }, 200 );
+    $("#main-menu").animate({ "top": "-=50px" }, 200);
 }
 
 function hideAddWindow() {
@@ -239,7 +239,7 @@ function hideAddWindow() {
         $("body").removeClass("modal-open");
     });
 
-    $( "#main-menu" ).animate({ "top": "+=50px" }, 200 );
+    $("#main-menu").animate({ "top": "+=50px" }, 200);
 }
 
 function collectAddData() {
@@ -399,12 +399,14 @@ $(function () {
         showAddWindow();
     });
 
-    $("#add-window input").keydown(function () {
+    $("#add-window input").keyup(function () {
         var inputs = $("#add-window input");
         var buttonOk = $("#add-window .btn-success");
         buttonOk.prop("disabled", false);
+
         for (var input of inputs) {
-            if ($(input).val().length == 0) {
+            var v = $(input).val();
+            if (!v || $.trim(v).length == 0) {
                 buttonOk.prop("disabled", true);
                 return;
             }
