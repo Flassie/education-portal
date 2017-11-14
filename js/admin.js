@@ -185,6 +185,9 @@ function showEditWindow(student) {
     $("#edit-window #edit-exam1").val(student.exam1);
     $("#edit-window #edit-exam2").val(student.exam2);
     $("#edit-window #edit-lesson-chooser #edit-" + student.lesson).addClass("selected-lesson");
+
+    $("body").addClass("modal-open");
+    $( "#main-menu" ).animate({ "top": "-=50px" }, 200 );
 }
 
 function hideEditWindow() {
@@ -192,7 +195,10 @@ function hideEditWindow() {
 
     editWindow.find(".edit-block").slideUp(300, function () {
         editWindow.hide();
+        $("body").removeClass("modal-open");
     });
+    
+    $( "#main-menu" ).animate({ "top": "+=50px" }, 200 );
 }
 
 function collectEditData() {
@@ -220,14 +226,20 @@ function showAddWindow() {
 
     addWindow.find("input").val("");
     addWindow.find(".btn-success").prop("disabled", true);
+
+    $("body").addClass("modal-open");
+    $( "#main-menu" ).animate({ "top": "-=50px" }, 200 );
 }
 
 function hideAddWindow() {
     var addWindow = $("#add-window");
 
     addWindow.find(".edit-block").slideUp(300, function () {
-        addWindow   .hide();
+        addWindow.hide();
+        $("body").removeClass("modal-open");
     });
+
+    $( "#main-menu" ).animate({ "top": "+=50px" }, 200 );
 }
 
 function collectAddData() {
@@ -378,21 +390,21 @@ $(function () {
         var e = $("#students-info tbody tr td input[type='checkbox']:checked");
         var number = e.parents("tr").find(".info-id").attr("id");
 
-        var student = students.find(function(e) { return e.number == number });
+        var student = students.find(function (e) { return e.number == number });
 
         showEditWindow(student);
     });
 
-    $("#add-student").click(function(e) {
+    $("#add-student").click(function (e) {
         showAddWindow();
     });
 
-    $("#add-window input").keydown(function() {
+    $("#add-window input").keydown(function () {
         var inputs = $("#add-window input");
         var buttonOk = $("#add-window .btn-success");
         buttonOk.prop("disabled", false);
-        for(var input of inputs) {
-            if($(input).val().length == 0) {
+        for (var input of inputs) {
+            if ($(input).val().length == 0) {
                 buttonOk.prop("disabled", true);
                 return;
             }
@@ -405,11 +417,11 @@ $(function () {
         updateStudents();
         updateStatistics();
         updateProgressBars();
-        
+
         hideAddWindow();
     });
-    
-    $("#add-window .btn-danger").click(function(e) {
+
+    $("#add-window .btn-danger").click(function (e) {
         hideAddWindow();
     });
 });

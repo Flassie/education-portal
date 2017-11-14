@@ -43,13 +43,23 @@ html, body {
     flex: 1 0 auto;
 }
 
-.hidden-scroll {
+.hidden-scroll-x {
     -ms-overflow-style: none;
     overflow-x: scroll;
     overflow-x: -moz-scrollbar-none;
 }
 
-.hidden-scroll::-webkit-scrollbar {
+.hidden-scroll-x::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden-scroll-y {
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+    overflow-y: -moz-scrollbar-none;
+}
+
+.hidden-scroll-y::-webkit-scrollbar {
     display: none;
 }
 
@@ -95,8 +105,11 @@ html, body {
     padding-top: 20px;
     padding-bottom: 20px;
 
+    max-height: 100%; 
+
     display: none;
 }
+
 
 .edit-background .edit-block input,
 .edit-background .edit-block button {

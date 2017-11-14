@@ -24,30 +24,35 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" id="main-menu">
-        <div class="container">
-            <div class="navbar-header">
-                <button id="collapse-menu-btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-contents"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Education Portal</a>
-            </div>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" id="main-menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button id="collapse-menu-btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-contents"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Education Portal</a>
+                </div>
 
-            <div class="navbar-collapse collapse menu-contents" id="main-menu-contents">
-                <ul class="nav navbar-nav">
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="#statistics">Statistics</a>
-                    </li>
-                </ul>
+                <div class="navbar-collapse collapse menu-contents" id="main-menu-contents">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#statistics">Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#students-info">Our students</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <div class="scroll-target page-block" id="statistics">
         <div class="container-fluid" style="margin-top: 50px;">
@@ -196,7 +201,7 @@
                 </ul>
             </div>
 
-            <div style="overflow-x: scroll;" class="col-xs-12 hidden-scroll">
+            <div style="overflow-x: scroll;" class="col-xs-12 hidden-scroll-x">
                 <table class="table table-hover" id="students-list">
                     <thead>
                         <th>
@@ -231,7 +236,7 @@
     </div>
 
     <div class="container edit-background" id="edit-window">
-        <div class="edit-block">
+        <div class="edit-block hidden-scroll-y">
             <div class="container-fluid">
                 <h3 class="text-center" style="padding-bottom: 7px; color: white;">Edit</h3>
                 <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
@@ -268,7 +273,7 @@
     </div>
 
     <div class="container edit-background" id="add-window">
-        <div class="edit-block">
+        <div class="edit-block hidden-scroll-y">
             <div class="container-fluid">
                 <h3 class="text-center" style="padding-bottom: 7px; color: white;">Edit</h3>
                 <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
